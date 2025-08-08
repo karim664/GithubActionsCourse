@@ -1,0 +1,16 @@
+name: first github action 
+
+on: 
+  push:
+    branches: 
+      main
+
+jobs:
+  first-job:
+    runs-on:
+      ubuntu-latest
+
+    steps:
+      - name: print a welcome message
+        run: echo "hello world"
+  
