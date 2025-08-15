@@ -3,7 +3,7 @@ name: first github action
 on: 
   push:
     branches: 
-      main
+      - main
 
 jobs:
   first-job:

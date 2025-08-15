@@ -1,0 +1,14 @@
+name: seconed workflow
+on: 
+    push: 
+        branches:
+            - main
+        paths:
+            - "src/**"
+
+jobs: 
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              run: echo "This is a test job for the second workflow"
