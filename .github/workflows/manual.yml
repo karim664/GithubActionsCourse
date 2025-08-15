@@ -1,0 +1,19 @@
+name: manual workflow
+on:
+    workflow_dispatch:
+        inputs:
+            env: 
+                description: 'Environment to deploy to'
+                required: true
+                default: 'staging'
+                type: choice
+                options:
+                  - staging
+                  - production
+
+jobs:
+    manual-job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: deploy app
+            run: echo "The selected env was ${{inputs.env}}"
