@@ -11,4 +11,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-              run: echo "This is a test job for the second workflow"
+              run: |
+                ls -la
+                echo "This is a test job for the second workflow"
